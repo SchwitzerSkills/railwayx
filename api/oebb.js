@@ -36,8 +36,8 @@ app.get('/getTrainWays', (req, res) => {
 
 
 const httpsOptions = {
-    key: fs.readFileSync('/etc/letsencrypt/live/oebb.phillips-network.work/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/oebb.phillips-network.work/fullchain.pem')
+    key: fs.readFileSync('/etc/letsencrypt/live/railwayx.phillips-network.work/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/railwayx.phillips-network.work/fullchain.pem')
 };
 
 console.log("Private Key:", httpsOptions.key);

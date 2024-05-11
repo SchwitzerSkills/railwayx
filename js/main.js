@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         document.getElementById("trainway").innerText = from + " - " + to;
 
-        fetch('https://oebb.phillips-network.work:3000/getTrainWays?fromLocation=' + from + '&toLocation=' + to + "&date=" + date.value + "&time=" + time.value) // api for the get request
+        fetch('https://railwayx.phillips-network.work:3000/getTrainWays?fromLocation=' + from + '&toLocation=' + to + "&date=" + date.value + "&time=" + time.value) // api for the get request
             .then(async response => response.json())
             .then(async dataObject => {
                 console.log(dataObject);
