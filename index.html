@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEBB</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white shadow">
+          <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-xl font-semibold text-gray-800">RailwayX</div>
+            <div class="space-x-4">
+              <a href="#" class="text-gray-600 hover:text-gray-800">Home</a>
+              <a href="#" class="text-gray-600 hover:text-gray-800">Route</a>
+              <a href="#" class="text-gray-600 hover:text-gray-800">Über uns</a>
+            </div>
+          </nav>
+        </header>
+      
+        <main class="container mx-auto px-6 py-12 flex-grow">
+          <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">Fahrplan Sucher</h1>
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col md:flex-row justify-center md:justify-between">
+              <div class="mb-4 md:mb-0 md:mr-4 flex-1">
+                <label class="block text-gray-700 font-bold mb-2" for="origin">
+                  Start
+                </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="origin"
+                  type="text"
+                  placeholder="Startbahnhof"
+                />
+              </div>
+              <div class="mb-4 md:mb-0 md:mr-4 flex-1">
+                <label class="block text-gray-700 font-bold mb-2" for="destination">
+                  Ziel
+                </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="destination"
+                  type="text"
+                  placeholder="Zielbahnhof"
+                />
+              </div>
+              <div class="mb-4 md:mb-0 md:mr-4 flex-1">
+                <label class="block text-gray-700 font-bold mb-2" for="date">
+                    Datum
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="date"
+                    type="date"
+                    placeholder="Datum"
+                />
+              </div>
+              <div class="mb-4 md:mb-0 md:mr-4 flex-1">
+                <label class="block text-gray-700 font-bold mb-2" for="time">
+                    Uhrzeit
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="time"
+                    type="time"
+                    placeholder="Uhrzeit"
+                />
+              </div>
+              <div class="flex flex-col md:flex-row items-center justify-center md:justify-end">
+                <button id="searchTrainWay"
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4 md:mb-0 md:mr-4"
+                  type="button"
+                >
+                  Suchen
+                </button>
+              </div>
+            </form>
+          </section>
+      
+          <section class="mb-12">
+            <h2 id="trainway" class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 text-center">-</h2>
+            <div class="bg-white shadow-md rounded p-8">
+                <div id="stationPoints" class="flex sm:flex sm:items-center sm:justify-between sm:mb-4 flex-col flex-row ">
+                </div>
+                <div class="relative h-64">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="h-1 bg-gray-400 w-full"></div>
+                    </div>
+                    <div id="points" class="flex justify-between transform -translate-y-1/2 relative top-1/2">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        </main>
+      
+        <footer class="bg-gray-800 text-white py-6">
+          <div class="container mx-auto px-6 flex items-center justify-between">
+            <div>&copy; RailwayX</div>
+            <div class="space-x-4">
+              <a href="#" class="text-white hover:text-gray-300">Datenschutzbestimmungen</a>
+              <a href="#" class="text-white hover:text-gray-300">Bedingungen der Dienstleistung</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+</body>
+</html>
